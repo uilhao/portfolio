@@ -1,0 +1,28 @@
+.profile-home {
+  @include breakpoints("xs", "sm", "md") {
+    margin-top: 60px;
+    margin-left: 10%;
+    width: 80%;
+    float: none;
+  }
+
+  border-radius: 50% 50%;
+  border: 6px solid $primary;
+  width: 100%;
+  // height: 100%;
+  float: right;
+}
+
+.img-border {
+  border: 7px solid $primary;
+  width: 100%;
+}
+
+.circle {
+  border: 6px solid $white;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  border-radius: 50% 50%;
+  //   box-shadow: 0px 0px 8px -1px $gray-800;
+}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+<article>
+
+    <div class="row">
+        <div class="col-lg-7 col-md-12">
+            <div class="intro">
+                <h1 class="display-3">{{ title }}</h1>
+                <h2 class="sub-title title-line lead">Senior Developer</h2>
+                
+                <p class="lead pt-3 pb-3">Wisi nulla tation vel ad dignissim, eros nulla hendrerit dolore feugiat aliquam esse iriure exerci ut augue suscipit vero. Wisi dolore facilisi eu praesent facilisis dignissim diam velit .</p>
+                
+                <div class="btn-bar go-to">
+                    <a class="btn btn-primary btn-lg mr-2" href="/portfolio">Portfolio</a>
+                    <a class="btn btn-outline-primary btn-lg" href="/contact">Contact Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-12">
+            <img class="profile-home" src="/static/img/william-pickens-yosemeti.jpg" title="William Pickens" alt="William Pickens">
+        </div>
+    </div>
+
+</article>
+    
+{% endblock content %}

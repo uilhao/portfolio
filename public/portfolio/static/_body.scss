@@ -1,0 +1,27 @@
+.body-wrapper {
+  background-color: $gray-200;
+}
+
+.page-title {
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+.sub-title {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: $font-weight-light;
+  color: $gray-800;
+  padding-bottom: 4px;
+}
+
+.title-line::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  margin: auto;
+  height: 3px;
+  background: $primary;
+  width: 40px;
+}

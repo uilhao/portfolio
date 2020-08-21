@@ -1,0 +1,6 @@
+
+.DS_Store
+venv/
+fontello-*
+__pycache__
+/themes

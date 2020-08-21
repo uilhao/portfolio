@@ -1,0 +1,47 @@
+{% load compress static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+                {{ title }}
+            {% endblock %}
+        </title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {% compress css %}
+            <link type="text/x-scss" href="{% static 'theme.scss' %}" rel="stylesheet" media="screen">
+            <link href="/static/css/fontello.css" rel="stylesheet" media="screen">
+        {% endcompress %}
+
+        {% block extra_head %}
+            {# Extra header stuff (scripts, styles, metadata, etc) #}
+        {% endblock %}
+    </head>
+
+    <body class="body-wrapper {% block body_class %}{% endblock %}">
+        
+        {% include 'includes/header.html' %}
+
+        <main class="container-fluid content-wrapper content-left">
+            <div class="container">
+                {% block header %}{% endblock %}
+                
+                 {% block content %}{% endblock %}
+            </div>
+        </main>
+
+
+        {% include 'includes/footer.html' %}
+
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/portfolio.js' %}"></script>
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
+    
+</html>

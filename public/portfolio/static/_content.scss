@@ -1,0 +1,45 @@
+.content-wrapper,
+.vertical-unit {
+  padding-top: $vertical-unit-spacing;
+  padding-bottom: $vertical-unit-spacing;
+}
+
+.content-left {
+  @include breakpoints("xs", "sm", "md") {
+    padding-left: 0px;
+    padding-top: 30px;
+  }
+
+  padding-top: 100px;
+  padding-left: $menu-widget + $grid-gutter-width;
+}
+
+.divider {
+  border-bottom: 1px solid $gray-300;
+}
+
+.text,
+.rich-text {
+  padding: 3px 5px;
+}
+
+.label {
+  font-weight: $font-weight-bold;
+}
+
+.template-homepage {
+  .intro {
+    padding-right: 20px;
+  }
+}
+
+article {
+  padding: 25px;
+  margin-bottom: 150px;
+}
+
+.boxed-bg {
+  background-color: $white;
+  border-radius: $border-radius-sm;
+  box-shadow: 0px 0px 8px -1px $gray-500;
+}

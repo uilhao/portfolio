@@ -1,0 +1,108 @@
+header.header-left {
+  @include breakpoints("xs", "sm", "md") {
+    left: -$menu-widget;
+    transition: left 0.4s ease-in-out;
+
+    &.open {
+      left: 0px;
+    }
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $menu-widget;
+  bottom: 0;
+  background: $white;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0px 3px 10px 0px $gray-500;
+  z-index: 3;
+  text-align: center;
+
+  ul.nav {
+    display: block;
+  }
+
+  a.nav-link {
+    display: block;
+    padding: 10px 0 13px 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid $gray-300;
+
+    i {
+      display: block;
+      font-size: 1.6rem;
+    }
+  }
+
+  .brand {
+    display: block;
+    background-color: $primary;
+    color: $white;
+    // box-shadow: inset inset 0px -1px 0px 0px $gray-600;
+  }
+
+  a.logo-text {
+    display: block;
+    color: $white;
+    padding: 5px 0 10px 0;
+    font-size: $lead-font-size;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  a.logo-photo {
+    padding: 15px 0 0;
+    display: block;
+  }
+}
+
+.mobile-header {
+  @include breakpoints("lg", "xl") {
+    display: none;
+  }
+
+  display: block;
+  height: 60px;
+  background-color: $white;
+  position: relative;
+
+  a.logo-text {
+    font-size: 1.6rem;
+  }
+
+  a.logo-photo {
+    float: left;
+  }
+
+  .circle {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border: 2px solid $primary;
+  }
+
+  .navbar {
+    padding-top: 10px;
+    display: block;
+  }
+}
+
+.toggler-menu {
+  background-color: $primary;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  top: 9px;
+  right: 12px;
+
+  span {
+    font-size: 1.6rem;
+    color: $white;
+  }
+}
