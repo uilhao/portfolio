@@ -53,7 +53,7 @@ def skills(request):
         },
         {
             'name': 'Java Script',
-            'level': 75,
+            'level': 79,
         },
         {
             'name': 'Bash',
@@ -93,11 +93,11 @@ def skills(request):
         },
         {
             'name': 'Flask',
-            'level': 90,
+            'level': 80,
         },
         {
             'name': 'Django',
-            'level': 85,
+            'level': 70,
         }
     ]
     model['tools'] = tools

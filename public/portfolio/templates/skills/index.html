@@ -17,13 +17,17 @@
             <h3 class="">Languages</h3>
             <hr/>
 
-            {% include "includes/partials/skill_progress.html" with skills=skills %}
+            {% for skill in skills %}
+                {% include "includes/partials/skill_progress.html" with name=skill.name level=skill.level %}
+            {% endfor %}
         </div>
         <div class="col-lg-6 col-md-12">
             <h3 class="">Tools/Stack</h3>
             <hr/>
 
-            {% include "includes/partials/skill_progress.html" with skills=tools %}
+            {% for tool in tools %}
+                {% include "includes/partials/skill_progress.html" with name=tool.name level=tool.level %}
+            {% endfor %}
         </div>
     </div>
 
@@ -34,21 +38,15 @@
 
             <div class="row">
                 <div class="col-lg-4 col-md-12">
-                    {% with name='MacOS' %}
-                        {% include "includes/partials/skill_progress_single.html" with level='98' %}
-                    {% endwith %}
+                    {% include "includes/partials/skill_progress.html" with name='MacOS' level='94' %}
                 </div>
                 
                 <div class="col-lg-4 col-md-12">
-                    {% with name='Linux' %}
-                        {% include "includes/partials/skill_progress_single.html" with level='95' %}
-                    {% endwith %}
+                    {% include "includes/partials/skill_progress.html" with name='Linux' level='90' %}
                 </div>
 
                 <div class="col-lg-4 col-md-12">
-                    {% with name='Windows' %}
-                        {% include "includes/partials/skill_progress_single.html" with level='70' %}
-                    {% endwith %}
+                    {% include "includes/partials/skill_progress.html" with name='Windows' level='70' %}
                 </div>
             </div>
         </div>
