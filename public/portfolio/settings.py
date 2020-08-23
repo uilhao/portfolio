@@ -142,3 +142,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'portfolio/static/')
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'portfolio/static')
 # ]
+
+# Storage engine to be used during compression
+# COMPRESS_STORAGE = "staticfiles.storage.StaticFileStorage"
+# The URL that linked media will be read from and compressed
+# media will be written to.
+# COMPRESS_URL = STATIC_URL
+# The absolute file path that linked media will be read from
+# and compressed media will be written to.
+# COMPRESS_ROOT = STATIC_ROOT

@@ -12,8 +12,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {% compress css %}
+        {% block css %}
             <link type="text/x-scss" href="{% static 'theme.scss' %}" rel="stylesheet" media="screen">
             <link href="/static/css/fontello.css" rel="stylesheet" media="screen">
+        {% endblock css %}
         {% endcompress %}
 
         {% block extra_head %}
